@@ -1,0 +1,25 @@
+<html>
+<style>
+    html {
+        display: table;
+        margin: auto;
+    }
+    
+    body {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 100px;
+    }
+</style>
+
+<body>
+    {% block content %}
+    <form action="" method="POST">
+        {% csrf_token %} {{form}}
+        <input type="submit" value="Submit">
+    </form>
+    {% endblock content %}
+</body>
+
+</html>
